@@ -30,7 +30,6 @@ func main() {
 		fmt.Fprintf(os.Stdout, "Found it!\n")
 		cancel()
 	}
-
 	time.Sleep(time.Second * 2)
 }
 
