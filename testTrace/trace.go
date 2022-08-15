@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	f, err := os.Create("./test4/trace.out")
+	f, err := os.Create("./testTrace/trace.out")
 	if err != nil {
 		panic(err)
 	}
@@ -20,5 +20,5 @@ func main() {
 	fmt.Println("hhhhh")
 	trace.Stop()
 
-	//go tool trace ./test4/trace.out
+	//go tool trace ./testTrace/trace.out
 }
