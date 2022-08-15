@@ -6,7 +6,18 @@ import (
 )
 
 func main() {
-	fun3()
+	x, y := 6, 8
+
+	//x,y = y,x
+
+	change1(&x, &y)
+	fmt.Println(x, y)
+
+	//fun3()
+}
+
+func change1(x, y *int) {
+	*x, *y = *y, *x
 }
 
 func fun3() {

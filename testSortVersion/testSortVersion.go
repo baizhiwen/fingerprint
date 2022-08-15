@@ -131,7 +131,20 @@ func (v AA) Less(i, j int) bool {
 	return false
 }
 
+type bb struct {
+
+}
+
+func (b *bb) d()  {
+
+}
+
+type CC interface {
+	d()
+}
+
 func main() {
+	var _ CC = (*bb)(nil)
 
 	var a = []string{"1.0", "1.1", "2.1.1", "1.2.1", "1.15.1", "1.3.1"}
 
@@ -146,3 +159,6 @@ func main() {
 	fmt.Println(aa)
 
 }
+
+
+

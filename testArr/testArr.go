@@ -9,6 +9,21 @@ import (
 
 func main() {
 
+	id := 3
+	typ := 3
+	if typ != 4 && (id ==1 ||id== 2) {
+		fmt.Println("wwwww")
+	}else {
+		fmt.Println("yyyy")
+	}
+
+	var ans float64 = 15 + 25 + 5.2
+	fmt.Println(ans)
+
+	var x = []int{4: 44, 55, 66, 1: 77, 88}
+	println(len(x), x[2])
+
+
 	for i, c := range []byte("世界 abc") {
 		fmt.Println(i, c)
 	}
