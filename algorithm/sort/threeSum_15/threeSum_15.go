@@ -1,4 +1,4 @@
-package main
+package threeSum_15
 
 import "fmt"
 
