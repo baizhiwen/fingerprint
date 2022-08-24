@@ -132,10 +132,9 @@ func (v AA) Less(i, j int) bool {
 }
 
 type bb struct {
-
 }
 
-func (b *bb) d()  {
+func (b *bb) d() {
 
 }
 
@@ -159,6 +158,3 @@ func main() {
 	fmt.Println(aa)
 
 }
-
-
-

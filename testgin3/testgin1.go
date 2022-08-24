@@ -25,14 +25,13 @@ func main1() {
 
 }
 
-
 func main() {
 	gin.SetMode(gin.DebugMode)
 	engine := gin.Default()
 	//f:=func(ctx *gin.Context) {
 	//	ctx.JSON(200,"halo: "+ctx.Request.URL.Path)
 	//}
-	engine.GET("/universe/api/v1/im/unilog/:app/*a",getting)
+	engine.GET("/universe/api/v1/im/unilog/:app/*a", getting)
 	//engine.GET("/universe/api/v1/im/unilog/im", f)
 
 	//engine.POST("/universe/api/v1/im/unilog/:app/*a", f)
@@ -40,7 +39,6 @@ func main() {
 	engine.Run(":8989")
 
 }
-
 
 func getting(c *gin.Context) {
 	c.String(http.StatusOK, "Hello ")

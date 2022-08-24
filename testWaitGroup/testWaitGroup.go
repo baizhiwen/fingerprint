@@ -15,4 +15,3 @@ func main() {
 	}()
 	wg.Wait() // 主goroutine等待，有可能和第7行并发执行
 }
-

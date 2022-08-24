@@ -11,15 +11,13 @@ func main() {
 
 	var a int
 	a = 123.
-	fmt.Printf("%T,%v\n",a,a)
+	fmt.Printf("%T,%v\n", a, a)
 
 	var m = make(map[*mapKey]string)
 	var key = mapKey{10}
 
-
 	m[&key] = "hello"
 	fmt.Printf("m[key]=%s\n", m[&key])
-
 
 	// 修改key的字段的值后再次查询map，无法获取刚才add进去的值
 	(&key).key = 100
@@ -27,6 +25,7 @@ func main() {
 	fmt.Println(&key)
 	fmt.Println(key)
 }
+
 //
 //func main() {
 //	var m = make(map[mapKey]string)

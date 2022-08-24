@@ -11,9 +11,9 @@ func main() {
 
 	id := 3
 	typ := 3
-	if typ != 4 && (id ==1 ||id== 2) {
+	if typ != 4 && (id == 1 || id == 2) {
 		fmt.Println("wwwww")
-	}else {
+	} else {
 		fmt.Println("yyyy")
 	}
 
@@ -22,7 +22,6 @@ func main() {
 
 	var x = []int{4: 44, 55, 66, 1: 77, 88}
 	println(len(x), x[2])
-
 
 	for i, c := range []byte("世界 abc") {
 		fmt.Println(i, c)

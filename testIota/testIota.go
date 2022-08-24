@@ -22,8 +22,7 @@ func main() {
 
 	fmt.Println(1 | 2 | 16)
 
-	ss := fmt.Sprintf("aaaa,%s","bbbb")
+	ss := fmt.Sprintf("aaaa,%s", "bbbb")
 	fmt.Println(ss)
-
 
 }

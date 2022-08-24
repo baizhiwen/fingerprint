@@ -31,8 +31,6 @@ import (
 //	fmt.Println(total.value)
 //}
 
-
-
 //
 //func main() {
 //	// 互斥锁保护计数器
@@ -61,12 +59,10 @@ import (
 //	fmt.Println(count)
 //}
 
-
 type Counter struct {
 	sync.Mutex
 	Count int
 }
-
 
 func main() {
 	var c Counter

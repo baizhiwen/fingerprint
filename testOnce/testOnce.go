@@ -36,7 +36,7 @@ func main() {
 	m["a"] = "a"
 	m["b"] = "b"
 	m["c"] = "c"
-	b, _ :=json.Marshal(m)
+	b, _ := json.Marshal(m)
 	fmt.Println(format.Bytes2Str(b))
 	fmt.Println(m)
 }

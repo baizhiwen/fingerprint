@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	s := "acfh"
 	t := "abcdeeefggg"
-	isS := isSubsequence(s,t)
+	isS := isSubsequence(s, t)
 	fmt.Println(isS)
 }
 
@@ -17,17 +17,17 @@ func isSubsequence(s string, t string) bool {
 	sArr := []byte(s)
 	tArr := []byte(t)
 	j := 0
-	for i:=0;i< len(tArr);i++{
+	for i := 0; i < len(tArr); i++ {
 		if tArr[i] == sArr[j] {
 			j++
-			if j== len(sArr) {
+			if j == len(sArr) {
 				break
 			}
 		}
 	}
-	if j== len(sArr) {
+	if j == len(sArr) {
 		return true
-	}else {
+	} else {
 		return false
 	}
 }

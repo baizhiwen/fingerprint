@@ -59,7 +59,7 @@ func RangeStructFiled(i interface{}, param *[]string) {
 		}
 		if value.Kind() != reflect.Struct && value.Kind() != reflect.Ptr {
 			if value.Kind() == reflect.String {
-				*param = append(*param, fmt.Sprintf("%s",value))
+				*param = append(*param, fmt.Sprintf("%s", value))
 			}
 		}
 		if value.Kind() == reflect.Struct || value.Kind() == reflect.Ptr || value.Kind() == reflect.Slice || value.Kind() == reflect.Map {
@@ -78,13 +78,13 @@ func RangeStructSlice(i interface{}, param *[]string) {
 	for sl := 0; sl < v.Len(); sl++ {
 		if v.Index(sl).Kind() == reflect.String {
 			value := v.Index(sl)
-			*param = append(*param, fmt.Sprintf("%s",value))
+			*param = append(*param, fmt.Sprintf("%s", value))
 		}
 		if v.Index(sl).Kind() == reflect.Interface {
 			value := v.Index(sl)
 			switch value.Interface().(type) {
 			case string:
-				*param = append(*param, fmt.Sprintf("%s",value))
+				*param = append(*param, fmt.Sprintf("%s", value))
 				break
 			default:
 				RangeSource(value.Interface(), param)
@@ -106,11 +106,11 @@ func RangeStructMap(i interface{}, param *[]string) {
 	for _, key := range v.MapKeys() {
 		value := v.MapIndex(key)
 		if key.Kind() == reflect.String {
-			*param = append(*param, fmt.Sprintf("%s",value))
+			*param = append(*param, fmt.Sprintf("%s", value))
 		}
 
 		if value.Kind() == reflect.String {
-			*param = append(*param, fmt.Sprintf("%s",value))
+			*param = append(*param, fmt.Sprintf("%s", value))
 		}
 
 		if key.Kind() == reflect.Struct || key.Kind() == reflect.Ptr || key.Kind() == reflect.Slice || key.Kind() == reflect.Map {
