@@ -1,40 +1,19 @@
 package main
 
+func main() {
+
+}
+
+/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */
 type ListNode struct {
 	Val int
 	Next *ListNode
-}
-
-func main() {
-	head := &ListNode{Val: 0}
-	next := head
-	for i := 1; i <= 10; i++ {
-		next.Next = &ListNode{Val: i}
-		next = next.Next
-	}
-	next = head.Next
-	println(head.Val)
-	for next != nil {
-		println(next.Val)
-		next = next.Next
-	}
-
-	head = reverseKGroupFromBack(head, 3)
-
-	next = head.Next
-	println(head.Val)
-	for next != nil {
-		println(next.Val)
-		next = next.Next
-	}
-}
-
-//链表从尾部分组反转
-func reverseKGroupFromBack(head *ListNode, k int) *ListNode {
-	head = reverseListNode2(head)
-	head = reverseKGroup(head, k)
-	head = reverseListNode2(head)
-	return head
 }
 
 //链表从头部分组反转
